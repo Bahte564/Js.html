@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JavaScript 40</title>
+<style type="text/css">
+#code{ width:130px; height:40px; background:#ccc; font:30px tahoma; color:#00f; text-align:center}
+</style>
+<script type="text/javascript">
+function generatecode()
+{ var codes="";
+  for(var i=1;i<=6;i++)
+  {
+	  if(Math.round(Math.random())==1)
+	  {codes=codes+String.fromCharCode(65+25*Math.random());}
+	  else
+	  {codes=codes+String.fromCharCode(48+9*Math.random());}
+  }
+	 document.getElementById("code").innerHTML=codes;
+}
+</script>
+</head>
+<body>
+<div id="code"></div>
+<br /><br />
+<form action="" method="get">
+<input name="" type="button" value="Change" onclick="generatecode()" />
+
+</form>
+</body>
+</html>
